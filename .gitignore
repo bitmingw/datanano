@@ -1,2 +1,6 @@
 *.zip
 */.ipynb_checkpoints
+
+# ignore tex files
+*.aux
+*.log

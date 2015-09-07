@@ -72,7 +72,7 @@
 \normalfont \normalsize 
 \textsc{Udacity Data Analyst Nanodegree} \\ [25pt] % Your university, school and/or department name(s) % OVERRIDE
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\LARGE{Assignment Title} \\ % The assignment title % SIZE OVERRIDE
+\LARGE{Project 1} \\ % The assignment title % SIZE OVERRIDE
 \horrule{0.5pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
@@ -88,74 +88,88 @@
 %	PROBLEM 1
 %----------------------------------------------------------------------------------------
 
-\section{Problem title}
+\section{Test a Perceptual Phenomenon}
 
-\lipsum[2] % Dummy text
-
+\subsection{Idenfity variables in the experiment}
 \medskip
 \noindent\fbox{
 	\parbox{\textwidth}{
-		The definition of problem 1 here.
+        What is our independent variable?
+        What is our dependent variable?
 	}
 }
 \medskip
 
-The answer of problem 1 here.
+In this experiment, the independent variable is congruence or
+incongruence of words and colors. The dependent variable is
+the time of response under each condition.
 
-%------------------------------------------------
+\subsection{Establish a hypothesis and statistical test}
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        What is an appropriate set of hypotheses for this task?
+        What kind of statistical test do you expect to perform?
+        Justify your choices.
+	}
+}
+\medskip
 
-\subsection{Heading on level 2 (subsection)} % if the problem is split to several parts
+The null hypothesis $H_0$: the time of response under congruent
+condition is greater than or equal to the time of response under
+incongruent condition.
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-\begin{align}
-A = 
-\begin{bmatrix}
-A_{11} & A_{21} \\
-A_{21} & A_{22}
-\end{bmatrix}
-\end{align}
+The alternative hypothesis $H_A$: the time of response under congruent
+condition is less than the time of response under incongruent condition.
 
-%------------------------------------------------
+Since we don't have information about the mean of population, the t-test
+should be used. From common sense we believe that time under
+incongruent condition should be greater than time under
+congruent condition, so a one-tail test is setup.
 
-\subsubsection{Heading on level 3 (subsubsection)}
+\subsection{Report descriptive statistics}
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        Report some descriptive statistics regarding this dataset.
+        Include at least one measure of central tendency and
+        at least one measure of variability.
+	}
+}
+\medskip
 
-\lipsum[3] % Dummy text
+Here we define some notations of statistics.
 
-\paragraph{Heading on level 4 (paragraph)}
-
-\lipsum[6] % Dummy text
-
-%----------------------------------------------------------------------------------------
-%	PROBLEM 2
-%----------------------------------------------------------------------------------------
-
-\section{Lists}
-
-%------------------------------------------------
-
-\subsection{Example of list (3*itemize)}
 \begin{itemize}
-	\item First item in a list 
-		\begin{itemize}
-		\item First item in a list 
-			\begin{itemize}
-			\item First item in a list 
-			\item Second item in a list 
-			\end{itemize}
-		\item Second item in a list 
-		\end{itemize}
-	\item Second item in a list 
+    \item $\bar{t_c}$: the mean time under congruent condition
+    \item $\bar{t_i}$: the mean time under incongruent condition
+    \item $s_c$: the sample standard deviation of time under
+        congruent condition
+    \item $s_i$: the sample standard deviation of time under
+        congruent condition
+    \item $n$: the sample size (of either condition)
 \end{itemize}
 
-%------------------------------------------------
+The sample size of each group is 24.
 
-\subsection{Example of list (enumerate)}
-\begin{enumerate}
-\item First item in a list 
-\item Second item in a list 
-\item Third item in a list
-\end{enumerate}
+The mean time under congruent condition $\bar{t_c} = 14.05$.
+Its sample standard deviation is $s_c = 3.56$.
 
-%----------------------------------------------------------------------------------------
+The mean time under incongruent condition $\bar{t_i} = 22.02$.
+Its sample standard deviation is $s_i = 4.80$.
+
+\subsection{Plot the data}
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        Provide one or two visualizations that show the distribution
+        of the sample data. Write one or two sentences noting what you
+        observe about the plot or plots.
+	}
+}
+\medskip
+
+
 
 \end{document}
+

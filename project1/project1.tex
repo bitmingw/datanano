@@ -141,22 +141,22 @@ congruent condition, so a one-tail test is setup.
 Here we define some notations of statistics.
 
 \begin{itemize}
-    \item $\bar{t_c}$: the mean time under congruent condition
-    \item $\bar{t_i}$: the mean time under incongruent condition
-    \item $s_c$: the sample standard deviation of time under
+    \item $\bar{t}_c$: the mean time under congruent condition
+    \item $\bar{t}_i$: the mean time under incongruent condition
+    \item $s_c^2$: the sample standard deviation of time under
         congruent condition
-    \item $s_i$: the sample standard deviation of time under
-        congruent condition
+    \item $s_i^2$: the sample standard deviation of time under
+        incongruent condition
     \item $n$: the sample size (of either condition)
 \end{itemize}
 
 The sample size of each group is 24.
 
-The mean time under congruent condition $\bar{t_c} = 14.05$.
-Its sample standard deviation is $s_c = 3.56$.
+The mean time under congruent condition $\bar{t}_c = 14.05$.
+Its sample standard deviation is $s_c^2 = 3.56$.
 
-The mean time under incongruent condition $\bar{t_i} = 22.02$.
-Its sample standard deviation is $s_i = 4.80$.
+The mean time under incongruent condition $\bar{t}_i = 22.02$.
+Its sample standard deviation is $s_i^2 = 4.80$.
 
 \subsection{Plot the data}
 \medskip
@@ -169,7 +169,75 @@ Its sample standard deviation is $s_i = 4.80$.
 }
 \medskip
 
+\clearpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{hist_congruent.png}
+    \caption{Histogram of Congruent Condition.}
+    \label{fig:hist-congruent}
+\end{figure}
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{hist_incongruent.png}
+    \caption{Histogram of Incongruent Condition.}
+    \label{fig:hist-incongruent}
+\end{figure}
+
+The two plots have are similar in these aspects:
+\begin{itemize}
+    \item Looks like normal distribution. The frequency in the middle
+        is greater than each tail.
+    \item Outliers exist at the right tail.
+\end{itemize}
+
+However, the mean in the second plot is greater than the first, and
+its variance is also larger.
+
+\subsection{Perform the statistical test and interpret your results}
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        What is your confidence level and your critical statistic
+        value? Do you reject the null hypothesis or fail to reject it?
+        Come to a conclusion in terms of the experiment task.
+        Did the results match up with your expectations?
+	}
+}
+\medskip
+
+The difference of means between two groups
+is $\bar{t}_{diff} = \bar{t}_c-\bar{t}_i = -7.96$.
+
+The standard error is given by
+\begin{equation}
+    SE = \sqrt{\frac{s_c^2}{n_c} + \frac{s_i^2}{n_i}} = 0.59.
+\end{equation}
+
+Thus the t-value is
+\begin{equation}
+    t = \frac{\bar{t}_{diff}}{SE} = \frac{-7.96}{0.59} = -13.50.
+\end{equation}
+
+If the significant level $\alpha = 0.05$, since the degree of
+freedom is $df = 24 + 24 - 2 = 46$, the t critical value is
+$t_{critical} = -1.68$.
+
+The confident interval is 
+\begin{equation}
+    (\bar{t}_{diff} - t_{critical} * SE,
+    \bar{t}_{diff} + t_{critical} * SE)
+    \ = \ (-9.15, -6.78)
+\end{equation}
+
+Since $t < t_{critical}$, we reject the null hypothesis and
+favor the alternative hypothesis.
+So the time of response under congruent condition is less than
+that under incongruent condition.
+
+Also from this experiment, we have 95\% of confidence that in the
+population, the time of response under congruent condition is
+$9.15 \; sec$ to $6.78 \; sec$ less than the time under incongruent condition.
 
 \end{document}
 

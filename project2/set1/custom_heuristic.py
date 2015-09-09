@@ -69,14 +69,32 @@ def custom_heuristic(file_path):
         # your code here
         #
         passenger_id = passenger["PassengerId"]
-        if passenger["Sex"] == "female":
-            predictions[passenger_id] = 1
-        elif passenger["Pclass"] == 1 and passenger["Age"] < 18:
-            predictions[passenger_id] = 1
-        else:
+        if passenger["Sex"] == "male":
             predictions[passenger_id] = 0
+        else:
+            if passenger["Pclass"] == 3:
+                if passenger["Age"] >= 38:
+                    predictions[passenger_id] = 0
+                elif passenger["Age"] >= 5.5:
+                    if passenger["Age"] < 12:
+                        predictions[passenger_id] = 0
+                    else:
+                        predictions[passenger_id] = 1
+                else:
+                    predictions[passenger_id] = 1
+            else:
+                predictions[passenger_id] = 1
     return predictions
     
 if __name__ == "__main__":
-    print custom_heuristic("titanic_data.csv")
+    predictions = custom_heuristic("titanic_data.csv")
+    data = pandas.read_csv("titanic_data.csv")
+    correct = 0
+    wrong = 0
+    for passenger_index, passenger in data.iterrows():
+        if predictions[passenger["PassengerId"]] == passenger["Survived"]:
+            correct += 1
+        else:
+            wrong += 1
+    print "Correct rate:", correct/float(correct+wrong)
 

@@ -95,7 +95,7 @@
 \medskip
 \noindent\fbox{
 	\parbox{\textwidth}{
-        Please include a list of references you used in the project.
+        Please include a list of references you have used in the project.
 	}
 }
 \medskip
@@ -104,60 +104,225 @@
 
 \end{enumerate}
 
-%------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
 
-\subsection{Heading on level 2 (subsection)} % if the problem is split to several parts
+\section{Statistical Test}
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-\begin{align}
-A = 
-\begin{bmatrix}
-A_{11} & A_{21} \\
-A_{21} & A_{22}
-\end{bmatrix}
-\end{align}
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        Which statistical test did you use to analyze the NYC subway data? Did you
+		use a one-tail to a two-tail P value? What is the null hypothesis? What is
+		your p-critical value?
+	}
+}
+\medskip
 
-%------------------------------------------------
+Answer of 1.1
 
-\subsubsection{Heading on level 3 (subsubsection)}
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        Why is the statistical test applicable to the dateset? In particular, consider
+		the assumptions that the test is making about the distribution of ridership in two
+		samples.
+	}
+}
+\medskip
 
-\lipsum[3] % Dummy text
+Answer of 1.2
 
-\paragraph{Heading on level 4 (paragraph)}
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        What results did you get from this statistical test? These should include
+		the following numerical values: p-values, as well as the means for each of
+		the two samples under test.
+	}
+}
+\medskip
 
-\lipsum[6] % Dummy text
+Answer of 1.3
+
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        What is the significance and interpolation of these results?
+	}
+}
+\medskip
+
+Answer of 1.4
 
 %----------------------------------------------------------------------------------------
 %	PROBLEM 2
 %----------------------------------------------------------------------------------------
 
-\section{Lists}
+\section{Linear Regression}
 
-%------------------------------------------------
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        What approach did you use to compute the coefficients theta and prediction
+		for $ENTRIESn_hourly$ in your regression model:
+		
+		(a) OLS using Statsmodels or Scikit Learn
+		
+		(b) Gradient descent using Scikit Learn
+		
+		(c) Something different
+	}
+}
+\medskip
 
-\subsection{Example of list (3*itemize)}
-\begin{itemize}
-	\item First item in a list 
+Answer of 2.1
+
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        What features (input variables) did you use in your model? Did you use any
+		dummy variables as part of your features?
+	}
+}
+\medskip
+
+Answer of 2.2
+
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        Why did you select these features in your model? We are looking for specific
+		reasons that lead you to believe that the selected features will contribute
+		to the predictive power of your model.
+		
 		\begin{itemize}
-		\item First item in a list 
-			\begin{itemize}
-			\item First item in a list 
-			\item Second item in a list 
-			\end{itemize}
-		\item Second item in a list 
+			\item Your reasons might be based on intuition.
+			\item Your reasons might also based on data exploration and experimentation.
 		\end{itemize}
-	\item Second item in a list 
-\end{itemize}
+	}
+}
+\medskip
 
-%------------------------------------------------
+Answer of 2.3
 
-\subsection{Example of list (enumerate)}
-\begin{enumerate}
-\item First item in a list 
-\item Second item in a list 
-\item Third item in a list
-\end{enumerate}
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        What are the parameters (coefficients) of the non-dummy features in your
+		linear regression model?
+	}
+}
+\medskip
+
+Answer of 2.4
+
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        What is your model's $R^2$ value?
+	}
+}
+\medskip
+
+Answer of 2.5
+
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+        What does this $R^2$ value mean for the goodness of fit for your regression
+		model? Do you think this linear model to predict ridership is appropriate
+		for this dataset, given this $R^2$ value?
+	}
+}
+\medskip
+
+Answer of 2.6
 
 %----------------------------------------------------------------------------------------
+%	PROBLEM 3
+%----------------------------------------------------------------------------------------
+
+\section{Visualization}
+
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+		Please include two visualizations that show the relationships between two or
+		more variables in the NYC subway data. Remember to add appropriate titles
+		and axes labels to your plot. Also please add a short description below each figure
+		commenting on the key insights depicted in the figure.
+		
+		One visualization should contain two histograms: one of $ENTRIESn_hourly$ for
+		rainy days and one of $ENTRIESn_hourly$ for non-rainy days.
+		
+		The other can be more freedom.
+	}
+}
+\medskip
+
+Answers here.
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 4
+%----------------------------------------------------------------------------------------
+
+\section{Conclusion}
+
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+		From your analysis and interpretation of the data, do more people ride the NYC
+		subway when it is raining or when it is not raining?
+	}
+}
+\medskip
+
+Answer of 4.1
+
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+		What analyses lead you to this conclusion? You should use results from both
+		your statistical test and your linear regression to support your analysis.
+	}
+}
+\medskip
+
+Answer of 4.2
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 5
+%----------------------------------------------------------------------------------------
+
+\section{Reflection}
+
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+		Please discuss potential shortcomings of the method of your analysis, including:
+		\begin{enumrate}
+			\item dataset
+			\item analysis, such as the linear regression model or statistical test.
+		\end{enumerate}
+	}
+}
+\medskip
+
+Answer of 5.1
+
+\medskip
+\noindent\fbox{
+	\parbox{\textwidth}{
+		(Optional) Do you have any other insight about the dataset that you would like to share
+		with us?
+	}
+}
+\medskip
+
+Answer of 5.2
 
 \end{document}
+
+

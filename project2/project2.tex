@@ -101,7 +101,7 @@
 \medskip
 
 \begin{enumerate}
-
+	\item https://en.wikipedia.org/wiki/Student\%27s\_t-test
 \end{enumerate}
 
 %----------------------------------------------------------------------------------------
@@ -120,7 +120,19 @@
 }
 \medskip
 
-Answer of 1.1
+The null hypothesis $H_0$: The average of total number of riders in NYC subway
+in raining days is the same as the average of that in non-rainy days.
+
+Since we have no idea of population mean, depending on if it is raining,
+an independent two-sample t-test is used to analyze the data.
+
+From the null hypothesis, the two-tail P value is used. To simplify the problem
+we assume that two samples have equal variance. Then the degree of freedom is given by
+\begin{equation}
+	df = n_1 + n_2 - 2 = 29
+\end{equation}
+
+Thus the p-critical value is $p_critical = \pm 2.045$
 
 \medskip
 \noindent\fbox{
@@ -132,7 +144,15 @@ Answer of 1.1
 }
 \medskip
 
-Answer of 1.2
+An independent two-sample t-test is applicable to the dataset for the following reasons:
+\begin{itemize}
+	\item We have a plenty of samples for the number of riders in both raining and
+	non-rainy days. The mean of those samples follows normal distribution.
+	\item We have no information about population means. Thus a t-test should be
+	conducted rather than a z-test.
+	\item Our hypothesis is defined as the equality of two sample means, so the
+	two-tail test is applied in the task.
+\end{itemize}
 
 \medskip
 \noindent\fbox{
@@ -302,7 +322,7 @@ Answer of 4.2
 \noindent\fbox{
 	\parbox{\textwidth}{
 		Please discuss potential shortcomings of the method of your analysis, including:
-		\begin{enumrate}
+		\begin{enumerate}
 			\item dataset
 			\item analysis, such as the linear regression model or statistical test.
 		\end{enumerate}

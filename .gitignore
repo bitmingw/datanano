@@ -4,3 +4,6 @@
 # ignore tex files
 *.aux
 *.log
+
+# ignore data files
+**/turnstile_data_master_with_weather.csv
